@@ -1,0 +1,32 @@
+const NFTs = []
+function mintNFT(_name, _uid, _semester, _course) {
+    const NFT = {
+        "name": _name,
+        "uid": _uid,
+        "semester": _semester,
+        "course": _course
+    } 
+    NFTs.push(NFT);
+    console.log("MINTED", _name);
+}
+
+function listNFTs () {
+    for(let i = 0; i < NFTs.length; i++) {
+        console.log("\nS.No: \t\t" + (i+1));
+        console.log("Name: \t\t" + NFTs[i].name);
+        console.log("UID: \t\t" + NFTs[i].uid);
+        console.log("Semester: \t" + NFTs[i].semester);
+        console.log("Course: \t" + NFTs[i].course);
+    }
+}
+
+function getTotalSupply(){
+    console.log(NFTs.length);
+}
+
+mintNFT("Suhani", "15560", "4", "B.E.(CSE)");
+mintNFT("Sagar", "14536", "2", "B.E.(Civil");
+mintNFT("Shreya", "15556", "4", "B.E.(CSE)");
+mintNFT("Karan", "12356", "1", "B.E.(Civil)");
+listNFTs();
+getTotalSupply();
